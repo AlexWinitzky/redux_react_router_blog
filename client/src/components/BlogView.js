@@ -66,7 +66,7 @@ class BlogView extends React.Component {
   
   
 const mapStateToProps = (store, props) => {
-  return { blog: store.blogs.find( a => a.id === parseInt(props.match.params.id)) }
+  return { blog: store.blogs.find( b => b.id === parseInt(props.match.params.id)) }
 }
 
 export default connect(mapStateToProps)(BlogView);
