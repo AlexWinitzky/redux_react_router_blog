@@ -37,7 +37,7 @@ class Blogs extends React.Component {
       <Container>
         <Header as="h3">Blog Posts</Header>
         <Button style={{marginBottom: '30px'}} onClick={this.toggleForm}>
-          { showForm ? "Hide Form" : "Show Form" }
+          { showForm ? "Hide Form" : "Create a Post" }
         </Button>
         {
           showForm ? 
@@ -52,8 +52,8 @@ class Blogs extends React.Component {
   }
 }
 
-const mapStateToProps = (store) => {
-  return { blogs: store.blogs, };
+const mapStateToProps = (state) => {
+  return { blogs: state.blogs, };
 }
 
 export default connect(mapStateToProps)(Blogs);

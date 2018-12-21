@@ -14,7 +14,6 @@ export const getBlogs = (cb) => {
 }
 
 export const addBlog = (blog) => {
-  debugger
   return (dispatch) => {
     axios.post("/api/blogs", { blog, })
       .then( res => dispatch({ type: ADD_BLOG, blog: res.data, }))
@@ -40,7 +39,6 @@ export default (state = [], action) => {
     case BLOGS:
       return action.blogs;
     case ADD_BLOG:
-    debugger
       return [action.blog, ...state];
     case UPDATE_BLOG:
       return state.map( blog => {
